@@ -17,7 +17,7 @@ nav {
 .nav-link {
     color: #333 !important;
     border-radius: 20px;
-    padding: 8px 20px;
+    padding: 8px 12px !important;
     margin: 0 10px;
 }
 .nav-link:hover {
@@ -63,4 +63,52 @@ nav {
     max-width: 100%;
     height: auto;
     margin: 25px;
+}
+
+.footer {
+    width: 100%;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    background-color: #76b5c5;
+  }
+
+  @media (max-height: 750px) {
+    .footer {
+      display: none;
+    }
+  }
+
+  @media (max-width: 750px) and (max-height: 1000px) {
+    .footer {
+      display: none; /* Oculta el footer en pantallas y alturas chicas */
+    }
+  }
+
+  *{
+    box-sizing: border-box;
+    margin: 0;
+    overflow: hidden;
+    white-space: wrap;
+    word-break: break-word;
+  }
+  
+  @media (max-width: 576px) {
+    .navbar .navbar-brand {
+      font-size: 24px; /* Reducir el tamaño de la fuente para dispositivos móviles */
+    }
+  }
+
+  @media (max-width: 576px) {
+    .navbar-nav {
+        flex-direction: column; /* Cambiar la dirección del flexbox a column para apilar las opciones del menú */
+    }
+    .navbar-nav .nav-item {
+        width: 100%; /* Ocupar todo el ancho disponible */
+        text-align: center; /* Centrar las opciones del menú en pantallas pequeñas */
+        margin-bottom: 10px; /* Añadir un margen inferior entre las opciones del menú */
+    }
+    .navbar-nav .nav-item:last-child {
+        margin-bottom: 0; /* Eliminar el margen inferior del último elemento del menú */
+    }
 }
